@@ -1,0 +1,153 @@
+body {
+    font-family: "Open Sans";
+}
+.header{
+    padding-top: 35px;
+    height: 15%;
+}
+.searchBtn{
+    height: 100%;
+    background: #FF83D2;
+    color: white;
+    border: 0;
+}
+.form-group input{
+    
+    border-radius: 0;
+}
+.form-group button{
+    color: white;
+    background: #FF83D2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: #FF83D2;
+}
+.form-inline .dateInput{
+    width: 120px;
+}
+.orderTable {
+    padding-top: 60px;
+    color: #3679c7;
+}
+.iconSize
+{
+    font-size: 1em;
+}
+.orderTable .darkText {
+    color:#b3b3b3;
+}
+
+.orderPoint {
+    margin-top: 30px;
+}
+.orderPoint .trainTablePadding{
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 0px;
+    font-size: 0.8em;
+}
+
+.orderPoint .darkText {
+    color:#b3b3b3;
+}
+.napravlenie {
+    padding-left: 26px;
+    color: #5689CC;
+    font-size: 1.2em;
+}
+.orderPoint .transportType {
+    padding-left: 26px;
+    font-size: 0.8em;
+}
+.centerText {
+    text-align: center;
+}
+ .orderBtn {
+    color: #3679C7;
+    background: #fff;
+    border-radius: 5px;
+    border-color: #3679C7;
+}.orderBtn:hover {
+    color: #fff;
+    background: #3679C7;
+    border-radius: 5px;
+    border-color: #3679C7;
+}
+.hrMrgn{
+    margin-top : 90px;
+    margin-bottom: 0px;
+}
+.selected{
+    background: #fff;
+}
+.vagon{
+    background: url(../img/ut-coupe-map-info-gs.png)no-repeat;
+    
+    height: 100px;
+    
+}
+.kupe {
+    background: #fff;
+    margin-top: 7px;
+    width: 40px;
+    height: 40px;
+}
+.one1{
+    background: #c9f9f9;
+    padding-left: 3px;
+    float: left;
+    width: 40%!important;
+    height: 50%;
+}
+.one2{
+    background: #c9f9f9;
+    padding-left: 3px;
+    float: right;
+    width: 40%!important;
+    height: 50%;
+}
+.one3{
+    background: #c9f9f9;
+    margin-top: 3px;
+    padding-left: 3px;
+    float: left;
+    width: 40%!important;
+    height: 40%;
+    font-size: 13px;
+}
+.one4{
+    background: #c9f9f9;
+    margin-top: 3px;
+    padding-left: 3px;
+    float: right;
+    width: 40%!important;
+    height: 40%;
+    font-size: 13px;
+}
+.starKupe {
+    margin-left: 155px;
+}
+.form-inline .emailWidth {
+    width: 20%!important;
+}
+.form-inline .inputSt {
+    width: 220px!important;
+}
+.form-group .sexBtn:focus{
+    color: #FF83D2;
+    border: 1px solid;
+    border-color:#FF83D2;
+    border-radius: 5px;
+    background-color: #fff3fb;
+    height: 34px;
+    width: 34px;
+}
+.form-group .sexBtn{
+    color: #3679C7;
+    border: 0px solid;
+    border-color:#FF83D2;
+    border-radius: 5px;
+    background-color: #fff3fb;
+    height: 34px;
+    width: 34px;
+}
