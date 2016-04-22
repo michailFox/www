@@ -1,0 +1,55 @@
+{
+  "blocks": [
+    {
+      "block_name" : "1",
+      "train_num" : "100э",
+      "route" : "Москва-Владивосток",
+      "train_type" : "поезд, РЖД/ФПК",
+      "track" : "3",
+      "departure_time" : "00:35, 24 сентября",
+      "arrival_time" : "3:17, 1 октября",
+      "seat" : "24 места"
+    },
+      {
+      "block_name" : "2",
+      "train_num" : "100э",
+      "route" : "Москва-Владивосток",
+      "train_type" : "поезд, РЖД/ФПК",
+      "track" : "3",
+      "departure_time" : "00:35, 24 сентября",
+      "arrival_time" : "3:17, 1 октября",
+      "seat" : "24 места"
+    },
+      {
+      "block_name" : "3",
+      "train_num" : "100э",
+      "route" : "Москва-Владивосток",
+      "train_type" : "поезд, РЖД/ФПК",
+      "track" : "3",
+      "departure_time" : "00:35, 24 сентября",
+      "arrival_time" : "3:17, 1 октября",
+      "seat" : "24 места"
+    },
+      {
+      "block_name" : "4",
+      "train_num" : "100э",
+      "route" : "Москва-Владивосток",
+      "train_type" : "поезд, РЖД/ФПК",
+      "track" : "3",
+      "departure_time" : "00:35, 24 сентября",
+      "arrival_time" : "3:17, 1 октября",
+      "seat" : "24 места"
+    },
+      {
+      "block_name" : "4",
+      "train_num" : "100э",
+      "route" : "Москва-Владивосток",
+      "train_type" : "поезд, РЖД/ФПК",
+      "track" : "3",
+      "departure_time" : "00:35, 24 сентября",
+      "arrival_time" : "3:17, 1 октября",
+      "seat" : "24 места"
+    }
+  ]
+
+}

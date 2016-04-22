@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale ="1.0">
+    <title>Document</title>
+    <link rel = 'stylesheet' href = 'js/datepicker/jquery-ui-1.11.4.custom/jquery-ui.min.css'>
+    <link rel = 'stylesheet' href = 'js/datepicker/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css'>
+    <link rel = 'stylesheet' href = 'js/datepicker/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css'>
+    
+<!--    <script src="less.js" type="text/javascript"></script>-->
+    <link rel="stylesheet" href="less/style.less">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="less/media-queries.less" rel="stylesheet" type="text/css">
+   
+    
+  
+   <script>
+       
+     
+       
+</script>
+</head>
+<body>
+    
+    
+    <div id="wrapper">
+              <header class="header clearfix">
+                   
+                      <div>
+                          <div class="logo">
+                               <a href="#"><img src="img/icons/tickets-logo.svg" alt=""></a>
+                          </div>
+                            <div class="inputs">
+                                    <form action="">
+                                         <select class="selct">
+                                                <option>Москва</option>
+                                                <option>Санкт-Петербург</option>
+                                                <option>Владивосток</option>
+                                                <option>Архангельск</option>
+                                        </select>
+                                        <select class="selct">
+                                                <option>Москва</option>
+                                                <option>Санкт-Петербург</option>
+                                                <option>Владивосток</option>
+                                                <option>Архангельск</option>
+                                        </select>
+                                       
+                                        <input type="text" class="text3 datepicker"  placeholder=" 7 окт"><button type="submit" class="btn btnStyle ">Найти</button>
+                                    </form>
+                            </div>
+                            <div class="clear"></div>
+                      </div>
+
+             </header>
+             
+  
+             <div class="main" >
+                 <div>
+                     <span class="tickInfo1">ПОЕЗД <img class="icon" src ="img/icons/up.svg"></img></span>
+                     <span class="tickInfo2 noActive">№ ПУТИ</span>
+                     <span class="tickInfo3 ">ОТПРАВЛЕНИЕ <img class="icon" src ="img/icons/down.svg"></img></span>
+                     <span class="tickInfo4">ПРИБЫТИЕ <img class="icon" src ="img/icons/down.svg"></img></span>
+                     <span class="tickInfo5 noActive">СВОБОДНЫЕ МЕСТА</span>
+                     <span class="tickInfo6"></span>
+                 </div>
+                 <hr>
+             </div>
+             
+             <div id="container"></div>
+             
+         </div>
+   
+    
+    <script src ="js/handlebars-v4.0.5.js"></script>
+    <script src="js/common.js"></script>
+    <script id = "tepmlate" type="text/x-handlebars-template">
+           {{#each blocks}}
+            <div class="list-item" data-num={{block_name}}>
+                         <div class="prolog clearfix">
+                            <div class="tick1">
+                                <div>
+                                    <span class="trainNum">{{train_num}}</span>
+                                </div>
+                                <div>
+                                    <span>{{route}}</span><br>
+                                    <span class="trainType">{{train_type}}</span>
+                                </div>
+                            </div>
+                            <span class="tick2 noActive">{{track}}</span>
+                            <span class="tick3">{{departure_time}}</span>
+                            <span class="tick4">{{arrival_time}}</span>
+                            <span class="tick5 noActive">{{seat}}</span>
+                            <span class="read priceBtn tick6" data-num="1">Купить билет</span>
+                         </div>
+
+                         <div class="order epilog " >
+                             <div id = "forms">
+                                <div class="clearfix">
+                                    <div class="vagoon">
+                                        <div class = "kupe">
+                                            <div class = "seet" num ="1" state = 1>
+                                                01
+                                            </div>
+                                            <div class = "seet" num ="2" state = 1>
+                                                02
+                                            </div>
+                                             <div class = "seet" num ="3" state = 1>
+                                                03
+                                            </div>
+                                            <div class = "seet busy" num ="4" state = 3>
+                                                04
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="5" state = 1>
+                                                05
+                                            </div>
+                                            <div class = "seet" num ="6" state = 1>
+                                                06
+                                            </div>
+                                             <div class = "seet" num ="7" state = 1>
+                                                07
+                                            </div>
+                                            <div class = "seet" num ="8" state = 1>
+                                                08
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="9" state = 1>
+                                                09
+                                            </div>
+                                            <div class = "seet" num ="10" state = 1>
+                                                10
+                                            </div>
+                                             <div class = "seet" num ="11" state = 1>
+                                                11
+                                            </div>
+                                            <div class = "seet" num ="12" state = 1>
+                                                12
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="13" state = 1>
+                                                13
+                                            </div>
+                                            <div class = "seet" num ="14" state = 1>
+                                                14
+                                            </div>
+                                             <div class = "seet" num ="15" state = 1>
+                                                15
+                                            </div>
+                                            <div class = "seet" num ="16" state = 1>
+                                                16
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="17" state = 1>
+                                                17
+                                            </div>
+                                            <div class = "seet" num ="18" state = 1>
+                                                18
+                                            </div>
+                                             <div class = "seet" num ="19" state = 1>
+                                                19
+                                            </div>
+                                            <div class = "seet" num ="20" state = 1>
+                                                20
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="21" state = 1>
+                                                21
+                                            </div>
+                                            <div class = "seet" num ="22" state = 1>
+                                                22
+                                            </div>
+                                             <div class = "seet" num ="23" state = 1>
+                                                23
+                                            </div>
+                                            <div class = "seet" num ="24" state = 1>
+                                                24
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="25" state = 1>
+                                                25
+                                            </div>
+                                            <div class = "seet" num ="26" state = 1>
+                                                26
+                                            </div>
+                                             <div class = "seet" num ="27" state = 1>
+                                                27
+                                            </div>
+                                            <div class = "seet" num ="28" state = 1>
+                                                28
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="29" state = 1>
+                                                29
+                                            </div>
+                                            <div class = "seet" num ="30" state = 1>
+                                                30
+                                            </div>
+                                             <div class = "seet" num ="31" state = 1>
+                                                31
+                                            </div>
+                                            <div class = "seet" num ="32" state = 1>
+                                                32
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="33" state = 1>
+                                                33
+                                            </div>
+                                            <div class = "seet" num ="34" state = 1>
+                                                34
+                                            </div>
+                                             <div class = "seet" num ="35" state = 1>
+                                                35
+                                            </div>
+                                            <div class = "seet" num ="36" state = 1>
+                                                36
+                                            </div>
+                                        </div>
+                                        <div class = "kupe kupe2">
+                                            <div class = "seet" num ="33" state = 1>
+                                                33
+                                            </div>
+                                            <div class = "seet" num ="34" state = 1>
+                                                34
+                                            </div>
+                                             <div class = "seet" num ="35" state = 1>
+                                                35
+                                            </div>
+                                            <div class = "seet busy" num ="36" state = 3>
+                                                36
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="seets">
+                                         Вы выбрали<br>
+                                         <span class = "pickedSeet"></span><span> МЕСТА</span>
+                                    </div>
+
+                                </div>
+
+                                 <div class="clearfix">
+                                     <div class = "form1">
+                                        <form class="rf">
+                                               <input class="formMrgn rfield" type="text" pattern="[0-9_-]{10}" title="Формат: (096) 999 99 99" placeholder="Телефон" id="user_phone" /><input class="rfield" id = "email"  type="text"   placeholder="E-mail">
+                                        </form>	
+                                    </div>
+
+                                    <div class = "form2">
+                                      <form class="rf">
+
+                                        <input type="text" class="form-control inputSt rfield"  placeholder=" Фамилия"><input type="text" class="form-control inputSt centerInput rfield" placeholder=" Имя"><input type="text" class="form-control inputSt rfield" placeholder=" Отчество"><input id = "brd" type="text" class="form-control inputSt datepicker brd rfield"  placeholder=" Дата рождения" >
+
+
+                                            <button type="button" class="sexBtn" style="margin-left: 30px;">М</button><button type="button" class="sexBtn">Ж</button>
+                                        </form>
+
+                                    </div>
+
+                                    <div class = "form3">
+                                        <form class="rf">
+                                                <input class="rfield" type="text"  required placeholder=" Гражданство"><input class="centerInput rfield" type="text" pattern="[0-9_-]{10}" placeholder=" Серия и № документа"><input type="text"  placeholder=" Действует до" class="datepicker rfield">
+                                        </form>	
+                                    </div>
+
+                                    <div class = "form4">
+                                        <form>
+                                                <button type="button" class="btn orderBtn btn_submit disabled">Забронировать</button>
+                                        </form>	
+                                    </div>
+
+                                </div>
+
+                            </div>
+                         </div>
+                         <hr>
+            </div>
+            {{/each}}
+        </script>
+    
+    
+    
+    
+    <script src = 'js/datepicker/jquery-ui-1.11.4.custom/external/jquery/jquery.js'></script>
+    <script src = 'js/datepicker/jquery-ui-1.11.4.custom/jquery-ui.min.js'></script>
+
+    <script>
+        $(function(){
+            $('.datepicker').datepicker();
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $(document).on('click','.read',function(){
+                var num = $(this).parent().parent().attr('data-num');
+                if ( $('.list-item[data-num='+num+']').children('.epilog').css('display') == 'none' ) 
+                {
+                    $('.list-item[data-num='+num+']').children('.epilog').animate({height: 'show'}, 400);
+                    $('.list-item[data-num='+num+']').css('background','#fff3fb');
+                } 
+                else 
+                {
+                    $('.list-item[data-num='+num+']').children('.epilog').animate({height: 'hide'}, 200);
+                    $('.list-item[data-num='+num+']').css('background','#FFF');
+                }
+
+		    });
+            
+            
+            $(document).on('click','.seet',function(){
+            
+                var picked = $(this).attr('num');
+
+                var pickedSeet =  $(this).parent().parent().parent('.clearfix').children('.seets').children('.pickedSeet').text();
+                var pickedArray = pickedSeet.split(",");
+
+                var state = $(this).attr('state');
+
+
+                switch (state)
+                {
+
+                    case '1': 
+                        {
+                            $(this).css('background','#2cafe3');
+                            $(this).attr('state','2');
+
+                            if($.inArray(picked, pickedArray)==-1)
+                            {
+                                pickedArray.push(picked);
+
+                                str = pickedArray.join(",");
+                                if(pickedSeet=="")
+                                   str=str.substring(1);
+
+                            $(this).parent().parent().parent('.clearfix').children('.seets').children('.pickedSeet').text(str);
+
+
+                            }
+
+                        }
+                        break;
+                    case '2':
+                    {
+                        $(this).css('background','#757575');
+                        $(this).attr('state','1');
+                        pickedArray.splice( $.inArray(picked, pickedArray), 1 );
+                        $(this).parent().parent().parent('.clearfix').children('.seets').children('.pickedSeet').text(pickedArray);
+
+                    }break;
+
+                    case '3':
+                    {
+
+                    }break;
+
+                }
+            });
+            
+            $(document).on('click','.btn_submit',function(){
+                var form = $('input');
+                var btn = $('button');
+                var empty = true;
+                $('input.rfield').addClass('empty_field');
+                    
+                $('input.rfield').each(function(){
+                    
+                    if($(this).val() != ''){
+                       // Если поле не пустое удаляем класс-указание
+                        $(this).removeClass('empty_field');
+                        console.log('delete empty');
+                        $(this).css({'border-color':'black'});
+                        empty = false;
+                    }
+                    else{
+                        empty = true;
+                        $(this).css({'border-color':'#d8512d'});
+                    }
+               }); 
+                
+                console.log($('input.empty_field'));
+               // if($('input.empty_field').size()>0)
+                 //   alert('Заполните все поля');
+        
+            });
+        });    
+            
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#email').blur(function() {
+                if($(this).val() != '') {
+                    var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                    if(pattern.test($(this).val())){
+                        $(this).css({'border' : '1px solid #569b44'});
+                        $('#valid').text('Верно');
+                    } else {
+                        $(this).css({'border' : '1px solid #ff0000'});
+                        $('#valid').text('Не верно');
+                    }
+                } else {
+                    $(this).css({'border' : '1px solid #ff0000'});
+                    $('#valid').text('Поле email не должно быть пустым');
+                }
+    });
+});
+        
+    </script>
+    
+</body>
+</html>
